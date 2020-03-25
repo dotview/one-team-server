@@ -1,0 +1,13 @@
+version: '2'
+services:
+  one-team-server-test:
+    container_name: one-team-server-test
+    build: .
+    environment:
+      - EnvName=fat
+      - PORT=8081
+      - NODE_ENV=testing
+    ports:
+      - "18081:8081"
+    volumes:
+      - /root/.ssh:/root/.ssh

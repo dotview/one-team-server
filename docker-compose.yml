@@ -1,0 +1,13 @@
+version: '2'
+services:
+  one-team-server:
+    container_name: one-team-server
+    build: .
+    environment:
+      - EnvName=dev
+      - PORT=8081
+      - NODE_ENV=production
+    ports:
+      - "8081:8081"
+    volumes:
+      - /root/.ssh:/root/.ssh

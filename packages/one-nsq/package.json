@@ -1,0 +1,17 @@
+{
+  "name": "one-nsq",
+  "version": "1.0.0",
+  "description": "nsq",
+  "main": "index.js",
+  "scripts": {
+    "startx": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "agenda": "^1.0.3",
+    "nsqjs": "^0.10.1",
+    "one-util": "1.0.0"
+  }
+}

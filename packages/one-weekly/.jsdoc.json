@@ -1,0 +1,20 @@
+{
+  "templates": {
+    "logoFile": "",
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "dateFormat": "ddd MMM Do YYYY",
+    "outputSourceFiles": true,
+    "outputSourcePath": true,
+    "systemName": "OneTeam Server",
+    "footer": "",
+    "copyright": "Oneteam Copyright © 2018",
+    "navType": "vertical",
+    "theme": "united",
+    "linenums": true,
+    "collapseSymbols": false,
+    "inverseNav": true,
+    "protocol": "html://",
+    "methodHeadingReturns": false
+  }
+}

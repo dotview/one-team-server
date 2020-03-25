@@ -1,0 +1,20 @@
+{
+  "name": "one-spider",
+  "version": "1.0.0",
+  "description": "a spider to fetch data from tower",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "fs": "0.0.1-security",
+    "request": "^2.82.0",
+    "superagent": "^3.6.0"
+  },
+  "dependencies": {
+    "one-util": "1.0.0"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "one-util",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "prettier": "prettier --write ./src/**/*.js",
+    "buildx": "./node_modules/.bin/babel index.js",
+    "test": "node ./preload.js && jest &",
+    "test:w": "jest --watch",
+    "test:cov": "jest --coverage &"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --no-ignore --fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
+  },
+  "author": "dotview",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "jest": "^22.4.2",
+    "prettier": "1.11.1",
+    "winston": "^2.4.2",
+    "winston-daily-rotate-file": "^3.1.3"
+  },
+  "dependencies": {
+    "ali-oss": "^6.0.1",
+    "dateformat": "^3.0.3",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.22.2",
+    "mongoose": "^5.0.13",
+    "nodemailer": "^4.6.3"
+  }
+}

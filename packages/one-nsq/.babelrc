@@ -1,0 +1,21 @@
+{
+    "presets": [
+        ['env',
+        {
+            "modules": false
+        }],
+        'stage-3',
+        'node6'
+    ],
+    "plugins": [
+        "transform-export-extensions",
+        "transform-es2015-modules-commonjs",
+        "transform-runtime"
+    ],
+    "comments": false,
+    "env": {
+        "test": {
+            "presets": ["env", "stage-3"]
+        }
+    }
+}

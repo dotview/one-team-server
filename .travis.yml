@@ -1,0 +1,32 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js: "8.9.3"
+
+cache:
+  directories:
+     - node_modules
+
+notifications:
+  email:
+    recipients:
+      - dotview@163.com
+  webhooks:
+    urls:
+      - https://hooks.pubu.im/services/21lek8kvepb9h1l
+    on_success: always # default: always
+    on_failure: always # default: always
+    on_start: never   # default: never
+    on_cancel: always # default: always
+    on_error: always # default: always
+
+before_install:
+  # Install lerna
+  - npm install -g lerna
+
+install:
+  - lerna bootstrap
+
+script: lerna run test
+
