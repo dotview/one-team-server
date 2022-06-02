@@ -24,6 +24,7 @@ const dsn = config.DSN
 if (env === 'production') {
     Raven.config(dsn).install()
 }
+
 // const accessLogStream = fs.createWriteStream(path.join(__dirname, '../access.log'), {flags: 'a'})
 // setup the logger
 

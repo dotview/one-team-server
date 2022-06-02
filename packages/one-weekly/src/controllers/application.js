@@ -29,7 +29,6 @@ function checkFormData(formData) {
 }
 
 class Application {
-
     /**
      * @Author   dongyusi
      * @DateTime 2018-03-26

@@ -71,8 +71,8 @@ class Okrs {
             filterRule.quarter = quarter
         }
         let list = await OkrsModel.find(filterRule, '_id creater theme title describe')
-                .sort({ _id: 1 })
-                .populate('creater', '_id headPortrait nickName')
+            .sort({ _id: 1 })
+            .populate('creater', '_id headPortrait nickName')
 
         let result = {
             result: {
@@ -94,8 +94,8 @@ class Okrs {
         }
 
         let detail = await OkrsModel.findOne(filterRule, '_id creater theme member title describe boards')
-                .populate('creater', '_id headPortrait nickName')
-                .populate('member', '_id headPortrait nickName')
+            .populate('creater', '_id headPortrait nickName')
+            .populate('member', '_id headPortrait nickName')
 
         let result = {
             result: {

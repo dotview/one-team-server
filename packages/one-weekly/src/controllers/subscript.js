@@ -81,8 +81,8 @@ class Subscript {
             let subList = await SubscriptModel.find({
                 userId
             })
-            .populate('subUserId', 'nickName headPortrait')
-            .exec()
+                .populate('subUserId', 'nickName headPortrait')
+                .exec()
             let recordList = subList.map(item => {
                 return item.subUserId
             })

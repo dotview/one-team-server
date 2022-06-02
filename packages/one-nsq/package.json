@@ -8,10 +8,13 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
   "dependencies": {
     "agenda": "^1.0.3",
+    "dotenv": "^16.0.1",
     "nsqjs": "^0.10.1",
     "one-util": "1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0"
   }
 }

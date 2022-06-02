@@ -24,7 +24,7 @@ const statusCodes = {
     LOGIN_NEEDED: -9
 }
 function businessHandler() {
-    return async (ctx, next) => {
+    return async(ctx, next) => {
         ctx.res.msg = (message = null) => {
             ctx.body = {
                 status: 'fail',
@@ -44,7 +44,7 @@ function businessHandler() {
     }
 }
 function responseHandler() {
-    return async (ctx, next) => {
+    return async(ctx, next) => {
         ctx.res.statusCodes = statusCodes
         ctx.statusCodes = ctx.res.statusCodes
 

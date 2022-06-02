@@ -9,7 +9,7 @@ const statusCodes = {
     LOGIN_NEEDED: -99
 }
 function businessHandler() {
-    return async (ctx, next) => {
+    return async(ctx, next) => {
         ctx.res.msg = (message = null) => {
             ctx.body = {
                 status: 'fail',

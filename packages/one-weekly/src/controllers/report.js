@@ -71,11 +71,11 @@ class Report {
         if (groupId === teamId.toString()) {
             // 查看所有成员汇报列表，分页加载
             weeklyList = await ReportModel.find(fiterRule).skip(5 * (pageNum - 1)).limit(5)
-            .populate('userId', '_id headPortrait nickName')
+                .populate('userId', '_id headPortrait nickName')
         } else {
             // 获取汇报列表
             weeklyList = await ReportModel.find(fiterRule)
-            .populate('userId', '_id headPortrait nickName')
+                .populate('userId', '_id headPortrait nickName')
         }
 
         // 获取回复列表
@@ -117,7 +117,7 @@ class Report {
             notWritten = curTeamInfo.filter(data => !weeklyListData.find(item => item.userId._id.toString() === data._id.toString()))
         } else {
             let allWeekliList = await ReportModel.find(fiterRule)
-            .populate('userId', '_id headPortrait nickName')
+                .populate('userId', '_id headPortrait nickName')
             // 未写周报的成员
             notWritten = curTeamInfo.filter(data => !allWeekliList.find(item => item.userId._id.toString() === data._id.toString()))
         }

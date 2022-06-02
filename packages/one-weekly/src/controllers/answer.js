@@ -7,7 +7,6 @@ import {
 
 import Msgbox from './msgbox'
 class Answer {
-
     /**
      * @Author   dongyusi
      * @DateTime 2018-11-6
@@ -74,6 +73,5 @@ class Answer {
         await AnswerModel.remove({ '_id': answerId })
         ctx.res.success()
     }
-
 }
 export default new Answer()

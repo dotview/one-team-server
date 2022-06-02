@@ -79,9 +79,9 @@ class Forum {
             .teamId
 
         let list = await ForumModel.find({ forumPId: null, teamId: teamId, beginDate: { $gte: beginDate, $lte: endDate } })
-                .sort({ _id: 1 })
-                .populate('userId', '_id headPortrait nickName')
-                .lean()
+            .sort({ _id: 1 })
+            .populate('userId', '_id headPortrait nickName')
+            .lean()
 
         for (let i = 0; i < list.length; i++) {
             let countComment = await ForumModel.countDocuments({ forumPId: list[i]._id, beginDate: { $gte: beginDate, $lte: endDate } })
@@ -118,7 +118,7 @@ class Forum {
         endDate = new Date(endDate)
 
         let owner = await ForumModel.findOne({ _id: forumId })
-                .populate('userId', '_id headPortrait nickName')
+            .populate('userId', '_id headPortrait nickName')
 
         let comments = []
 

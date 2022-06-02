@@ -145,6 +145,5 @@ class Msgbox {
         // await MsgboxModel.update({ 'userId': userId }, { isRead: true }, { multi: true })
         ctx.res.success()
     }
-
 }
 export default new Msgbox()

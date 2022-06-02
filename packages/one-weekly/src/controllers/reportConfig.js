@@ -10,7 +10,6 @@ import {
 } from 'one-models'
 
 class ReportConfig {
-
     /**
      * @Author   dongyusi
      * @DateTime 2018-03-28

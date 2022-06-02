@@ -2,7 +2,7 @@
  * 数据库连接
  */
 import mongoose from 'mongoose'
-const dbUrl = process.env.NODE_ENV !== 'production' ? process.env['DB_URL_MAIN'] : 'mongodb://192.168.4.28:27017/oneteam'
+const dbUrl = process.env['DB_URL_MAIN']
 
 /*
  */
